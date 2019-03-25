@@ -1,0 +1,24 @@
+<section class="profiles_wrapper">
+  <header>
+    <div class="count">
+      <span>{{ profiles?.total_count }} </span> Repository Results
+    </div>
+  </header> 
+  <section class="profiles_roll">
+      <app-user-profile *ngFor="let profile of profiles?.items | paginate: { totalItems: profiles?.total_count, itemsPerPage: ITEMS_PER_PAGE, currentPage: p }" [profile]="profile"></app-user-profile> 
+  </section>
+  <footer>
+    <button [routerLink]="['/']">Back To Search</button>
+    <pagination-controls (pageChange)="onPageChange($event)"></pagination-controls>  
+  </footer>
+  
+</section>
+
+<!-- <pre> {{data.items | json  }} </pre> -->
+
+<!-- <ul>
+  <li *ngFor="let profile of data.items | paginate: { totalItems: data.total_count, itemsPerPage: 30, currentPage: p }">
+      <pre>{{ profile | json }}</pre>
+  </li>
+</ul>
+<pagination-controls (pageChange)="onPageChange($event)"></pagination-controls>   -->

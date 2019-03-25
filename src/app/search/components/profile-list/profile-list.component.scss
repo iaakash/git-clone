@@ -1,0 +1,34 @@
+.profiles_roll {
+    min-height: calc(100vh - 120px);
+}
+
+header {
+    padding: 1rem;
+    .count {
+        font-weight: 100;
+        font-size: 1.5rem;
+        span {
+            font-weight: 700;
+    
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    left: 1rem;
+    right: 1rem;
+}
+
+button {
+    background-color: #eff3f6;
+    background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
+    color: #24292e;
+    font-size: 10px;
+    padding: 0.35rem 1.25rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
